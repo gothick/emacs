@@ -19,7 +19,9 @@
 default['emacs']['packages'] = case node['platform_family']
                                when 'freebsd'
                                  ['editors/emacs-nox11']
-                               when 'rhel', 'fedora', 'arch', 'debian'
+                               when 'debian'
+                                 node['platform_version'].to_f <= 14.04 ? "emacs23-nox" : "emacs-nox"
+                               when 'rhel', 'fedora', 'arch'
                                  ['emacs-nox']
                                else
                                  ['emacs']

@@ -3,7 +3,7 @@ maintainer        'Joshua Timberman'
 maintainer_email  'cookbooks@housepub.org'
 license           'Apache 2.0'
 description       'Installs emacs'
-version           '0.10.1'
+version           '0.10.2'
 
 recipe 'emacs', 'Installs Emacs'
 
